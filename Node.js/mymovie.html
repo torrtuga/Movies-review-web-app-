@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOvieBox</title>
+    <link href="css/landing.css" rel="stylesheet">
+    <script>
+
+        function f(){
+            var moviename =sessionStorage.getItem('key');
+            var movieimg =sessionStorage.getItem('img');
+            console.log(moviename);
+            console.log(movieimg);
+
+            var name=  document.getElementById('poster');
+            name.innerHTML=moviename;
+            var image=document.getElementById("pimg")
+            image.src=movieimg;
+            //image.height=400px;
+            //image.width=300px;
+        }
+        
+        function polarity() {
+
+            url1=window.location.href;
+           // alert(url1);
+            // i=1;
+            while(true){
+                url2=window.location.href;
+                //alert(url2);
+                if(url1.localeCompare(url2)!=0){alert("d");
+                        break;}
+            }
+
+            //alert(url2);
+            url=url2.split("?")[1].split(",");
+            pos=url[0];
+            alert(pos);
+        }
+    </script>
+</head>
+<body id="body" onload="f()">
+
+
+<style>
+    body {
+        background-image:url("images/civilwar3.jpg");
+        background-position: center top;
+        width: 80%;
+        background-size: cover;
+        padding-bottom: 45%;
+
+
+    }
+</style>
+
+<header>
+    <div class="header">
+        <style>
+            #img{
+                position: absolute;
+                top: 20px;
+                z-index: 99;
+            }
+
+
+            .profile li:hover ul 	{
+                display: block; /* Displays the drop-down box when the menu item is hovered over */
+            }
+
+            .profile li ul 	{
+                display: none;  /* Hides the drop-down menu */
+                height: auto;
+                margin: 0; /* Aligns drop-down box underneath the menu item */
+                padding: 0; /* Aligns drop-down box underneath the menu item */
+            }
+
+        </style>
+        <img src="images/MovieBox1.png" WIDTH="220PX" height="80px" id="img" ></div>
+    <form action=" http://127.0.0.1:8080/search" method="post">
+
+        <input  id= "search" type="text" size="160" list="anrede"  name="title" />
+
+        <datalist id="anrede"></datalist>
+
+        <script type="text/javascript" src="js/search.js" >
+
+        </script>
+
+        <script type="text/javascript" src="js/movimg.js" >
+
+        </script>
+
+
+        <script>
+
+            function sendTitle() {
+
+
+                var x = document.getElementById('search').value;
+                alert(x);
+                sessionStorage.setItem('key', x);
+            }
+
+        </script>
+
+        <style>
+            #find{
+                position: absolute;
+                top: 30px;
+                left: 1420px;
+                width: 6em;
+                height: 2.2em;
+                background-color:#d70000 ;
+                color: white;
+                border-radius: 4px;
+                z-index: 99;
+                font-family: "Calibri";
+                font-size:15px;
+
+            }
+            #search{
+                position: absolute;
+                top: 30px;
+
+
+            }
+
+        </style>
+
+        <button type="submit" id="find"  onclick="sendTitle()" /><b>Search</b></button>
+        </div>
+    </form>
+
+    <div id="nav">
+
+        <ul class="navbar">
+            <li><a href="#home"> <b>Quick Links</b>  </a>
+                <ul >
+                    <li><a href="#"><font color="black">Back to Home</font></a></li>
+
+                </ul>
+            </li>
+            <li id="a"><a href="#news"><b>About us</b>                   </pre></a></li>
+
+        </ul>
+
+    </div>
+
+    <div id="settings">
+        <ul class="profile">
+
+            <li   style="position: absolute;top: 30px;right: 60px;color: white;font-size: larger"> <b>Welcome</b>
+                <ul >
+                    <li ><a href="#" onclick="logout()"><font color="white">Logout</font></a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<script>
+    function logout() {
+        //console.log("its here");
+        window.location="http://127.0.0.1:8080/logout";
+    }
+
+</script>
+<style>
+    #pimg{
+        position: absolute;
+        top: 300px;
+        left: 450px;
+        border-color: #000000;
+        border-solid:blue;
+
+    }
+    #poster{
+        position: absolute;
+        top: 280px;
+        left:800px;
+        color: white;
+        z-index: 99;
+
+
+
+
+    }
+
+</style>
+
+
+<h1 id ='poster'></h1>
+<img width="300px" height="450px" id="pimg" />
+<div id="moviename">
+
+</div>
+
+<style>
+   #moviename{
+       width: 600px;
+       height: 70px;
+       background: rgba(0, 0, 0, 0.75);
+       position: absolute;
+       top:300px;
+       left:750px;
+
+   }
+#recmd{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 35px;
+    position: absolute;
+    top:400px;
+    left:1012px;
+
+}
+#polar{
+
+    position: absolute;
+    left:850px;
+    top: 550px;
+}
+    #pos{
+
+        color: green;
+        font-size: 42px;
+        font-family: "Calibri";
+
+    }
+    #neg{
+
+        color: red;
+        font-size: 42px;
+        font-family: "Calibri";
+
+    }
+
+</style>
+<form action=" http://127.0.0.1:8080/recommend" method="post">
+<button type="submit" id="recmd">
+Recommendation
+</button>
+    <div id="polar"></div>
+</form>
+
+<script>
+foo();
+function  foo() {
+
+
+    url = window.location.href;
+
+    //alert(url);
+    url = url.split("?")[1].split(",");
+    pos = url[0];
+    neg = url[1];
+    p = document.getElementById("polar");
+    p.innerHTML ="<div id='pos'>Positive-" +pos.substr(2,5) +"</div>"+ "</br><div id='neg'>Negative-" + neg.substr(0,5)+"</div>";
+}
+
+</script>
+
+
+</body>
+</html>

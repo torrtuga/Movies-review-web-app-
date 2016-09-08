@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns:height="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>MOvieBox</title>
+    <link href="css/landing.css" rel="stylesheet">
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/examples.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#fullpage').fullpage();
+      });
+    </script>
+
+
+
+
+
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <style type="text/css">
+       .navbar{
+         margin-top: -60px;
+         left:-141px;
+       }
+     </style> -->
+
+  </head>
+  <body onload="crit()" >
+
+  <script src="js/critic.js">
+
+  </script>
+  <header>
+      <div class="header">
+        <style>
+          #img{
+            position: absolute;
+            top: 20px;
+            z-index: 99;
+          }
+
+
+         .profile li:hover ul 	{
+            display: block; /* Displays the drop-down box when the menu item is hovered over */
+          }
+
+          .profile li ul 	{
+            display: none;  /* Hides the drop-down menu */
+            height: auto;
+            margin: 0; /* Aligns drop-down box underneath the menu item */
+            padding: 0; /* Aligns drop-down box underneath the menu item */
+          }
+
+        </style>
+
+
+       <img src="images/MovieBox1.png" WIDTH="220PX" height="80px" id="img" ></div>
+       <form action=" http://127.0.0.1:8080/search" method="post">
+
+        <input  id= "search2" type="text" size="160" list="anrede"  name="title" />
+
+        <datalist id="anrede"></datalist>
+         <script>
+
+        function sendTitle() {
+
+
+          var x = document.getElementById('search').value;
+          alert(x);
+          sessionStorage.setItem('key', x);
+        }
+
+         </script>
+
+        <script type="text/javascript" src="js/search.js" >
+
+        </script>
+        <style>
+          #find{
+            position: absolute;
+            top: 20px;
+            left: 1420px;
+            width: 6em;
+            height: 2.2em;
+            background-color:#d70000 ;
+            color: white;
+            border-radius: 4px;
+            z-index: 99;
+            font-family: "Calibri";
+            font-size:15px;
+
+
+
+          }
+
+        </style>
+
+         <button  id="find"  onclick="sendTitle()" /><b>Search</b></button>
+        </div>
+        </form>
+
+       <div id="nav">
+
+         <ul class="navbar">
+           <li><a href="#home"> <b>Quick Links</b>  </a>
+           <ul >
+             <li><a href="#"><font color="black">Trending</font></a></li>
+             <li><a href="#"><font color="black">Top Picks</font></a></li>
+             <li><a href="#"><font color="black">Rate More </font></a></li>
+
+           </ul>
+           </li>
+           <li id="a"><a href="#news"><b>About us</b>                   </pre></a></li>
+
+         </ul>
+
+       </div>
+
+      <div id="settings">
+      <ul class="profile">
+
+      <li   style="position: absolute;top: 30px;right: 60px;color: white;font-size: larger"> <b>Welcome</b>
+        <ul >
+          <li ><a href="#" onclick="logout()"><font color="white">Logout</font></a></li>
+
+        </ul>
+        </li>
+        </ul>
+      </div>
+    </header>
+  
+  <script>
+    function logout() {
+      //console.log("its here");
+      window.location="http://127.0.0.1:8080/logout";
+    }
+
+  </script>
+
+<!--Experiment-->
+  <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="css/examples.css" />
+
+  <style>
+
+    /* Style for our header texts
+    * --------------------------------------- */
+    h1{
+      font-size: 5em;
+      font-family: arial,helvetica;
+      color: #fff;
+      margin:0;
+      padding:0;
+    }
+    .intro p{
+      color: #fff;
+    }
+
+    /* Centered texts in each section
+    * --------------------------------------- */
+    .section{
+      text-align:center;
+    }
+
+
+
+    #section0{
+
+
+      background-color: rgba(37, 37, 37, 0.99)
+
+    }
+
+    #section2{
+      background-color: rgba(37, 37, 37, 0.99)
+    }
+
+
+
+    /*Adding background for the slides
+   * --------------------------------------- */
+    #slide1{
+
+
+
+      background-color: rgba(37, 37, 37, 0.99)
+
+
+    }
+    #slide2{
+      background-color: rgba(37, 37, 37, 0.99)
+    }
+
+
+    /* Bottom menu
+    * --------------------------------------- */
+    #infoMenu li a {
+      color: #fff;
+    }
+  </style>
+
+
+  <div id="fullpage">
+    <div class="section " id="section0">
+
+      <style>
+        #trend{
+          top: 75px;
+          left: 800px;
+          font-size: 50px;
+          font-family:Calibri;
+          color: white;
+          position:absolute;
+          transition: all .5s ease;
+        }
+        #trend:hover {
+
+          cursor: pointer;
+          color:#d70000;
+        }
+
+        /*.view {
+          width: 325px;
+          height: 450px;
+          margin: 10px;
+          display: inline;
+
+          overflow: hidden;
+          position: relative;
+          text-align: center;
+          box-shadow: 1px 1px 2px #e6e6e6;
+          cursor: default;
+          background: rgba(37, 37, 37, 0.99) url(/images/bgimg.jpg)  no-repeat center center
+        }
+        .view .mask, .view .content {
+          width: 325px;
+          height: 450px;
+          position: absolute;
+          overflow: hidden;
+          top: 0;
+          left: 0
+        }
+        .view img {
+          display: block;
+        }
+*/
+
+
+      </style>
+      <p id="trend">Trending</p>
+
+      <ul class="images" >
+
+        <li >
+        <img id="zoom" src="images/batman.jpg" width="325" height="450"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </li>
+        <li>
+         <img id="zoom1"src="images/jungle.jpeg" width="325" height="450"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+ </li>
+
+
+
+        <li ><img id="zoom2" src="images/kung%20fu%20panda3.jpg" width="325" height="450"onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li ><img  id ="zoom3"src="images/rev.jpg" width="325" height="450"onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/></li>
+      </ul>
+
+
+
+
+    </div>
+    <div class="section" id="section1">
+      <div class="slide" id="slide1">
+
+        <style>
+          #toppicks{
+            top: 75px;
+            left: 800px;
+            font-size: 50px;
+            font-family:Calibri;
+            color: white;
+            position:absolute;
+            transition: all .5s ease;
+          }
+          #toppicks:hover {
+            color: #d70000;cursor: pointer;
+          }
+
+        </style>
+        <p id="toppicks">Top Picks</p>
+
+        <ul class="images" >
+
+          <li ><img id="zoom" src="images/batman.jpg" width="325" height="450" onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li><img id="zoom1"src="images/jungle.jpeg" width="325" height="450"onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li ><img id="zoom2" src="images/kung%20fu%20panda3.jpg" width="325" height="450"onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li ><img  id ="zoom3"src="images/rev.jpg" width="325" height="450"onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/></li>
+        </ul>
+
+
+
+
+
+
+
+      </div>
+      <div class="slide" id="slide2">
+
+      <style>
+        #toppicks2{
+          top: 75px;
+          left: 2730px;
+          font-size: 50px;
+          font-family:Calibri;
+          color: white;
+          position:absolute;
+          transition: all .5s ease;
+        }
+        #toppicks2:hover {
+          cursor: pointer;
+          color: #d70000;
+        }
+
+      </style>
+      <p id="toppicks2">Top Picks</p>
+
+      <ul class="images" >
+
+        <li ><img id="zoom" src="images/batman.jpg" width="325" height="450" onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><img id="zoom1"src="images/jungle.jpeg" width="325" height="450"onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li ><img id="zoom2" src="images/kung%20fu%20panda3.jpg" width="325" height="450"onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li ><img  id ="zoom3"src="images/rev.jpg" width="325" height="450"onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/></li>
+      </ul>
+
+    </div>
+    </div>
+    <div class="section" id="section2">
+      <div class="intro">
+        <style>
+          #ratemore{
+            top: 75px;
+            left: 450px;
+            font-size: 50px;
+            font-family:Calibri;
+            color: white;
+            position:absolute;
+            transition: all .5s ease;
+          }
+          #ratemore:hover {
+            color: #d70000;cursor: pointer;
+          }
+
+        </style>
+        <p id="ratemore">Rate More</p>
+
+        <ul class="images" >
+
+          <li ><img id="zoom" src="images/batman.jpg" width="325" height="450" onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li><img id="zoom1"src="images/jungle.jpeg" width="325" height="450"onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li ><img id="zoom2" src="images/kung%20fu%20panda3.jpg" width="325" height="450"onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+          <li ><img  id ="zoom3"src="images/rev.jpg" width="325" height="450"onmouseover="this.width='335'; this.height='460'" onmouseout="this.width='325'; this.height='450'"/></li>
+        </ul>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+  
+  </body>
+  
+  </html>

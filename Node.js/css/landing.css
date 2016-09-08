@@ -1,0 +1,247 @@
+
+.header{
+    width: 150%;
+    height: 100px;
+    border-style: solid;
+    border-color: #000000;
+    background: #000000;
+    top:-50px;
+
+}
+
+#search{
+    position: absolute;
+    left: 250px;
+    top: 50px;
+    height: 25px;
+    width: auto;
+    z-index: 99;
+
+}
+#search2{
+    position: absolute;
+    left: 250px;
+    top: 20px;
+    height: 25px;
+    width: auto;
+    z-index: 99;
+
+}
+
+/*
+#nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+#nav li {
+    float: left;
+}
+
+#nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#nav li a:hover {
+    background-color: #d70000;
+}
+
+#nav{
+
+    position: absolute;
+    left: 250px;
+    top: 73px;
+    z-index: 99;
+}
+*/
+
+#nav	{
+    left: 250px;
+    top: -50px;
+    margin: 0; /* Ensures there is no space between sides of the screen and the menu */
+     /* Makes sure that your menu remains on top of other page elements */
+    position: relative;
+    z-index: 99;
+
+}
+#nav li a:hover {
+    background-color: #d70000;
+    color: black;
+    transition: all .3s ease;
+}
+#nav li {
+    float: left;
+}
+
+#nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+
+#section0 ul.images{
+
+
+
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    width: 1900px;
+    overflow-x: auto;
+    background-color: rgba(37, 37, 37, 0.99);
+
+}
+#section0 ul.images li {
+    display: inline;
+    width: 150px;
+    height: 150px;
+}
+
+
+#section1 ul.images{
+
+
+
+     margin: 0;
+     padding: 0;
+     white-space: nowrap;
+     width: 1900px;
+     overflow-x: auto;
+     background-color: rgba(37, 37, 37, 0.99);
+
+ }
+#section1 ul.images li {
+    display: inline;
+    width: 150px;
+    height: 150px;
+}
+
+#section2 ul.images{
+
+
+
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    width: 1900px;
+    overflow-x: auto;
+    background-color: rgba(37, 37, 37, 0.99);
+
+}
+#section2 ul.images li {
+    display: inline;
+    width: 150px;
+    height: 150px;
+}
+
+
+
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+   /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: black;
+    display: block;
+}
+
+/*
+.navbar li ul 	{
+    display: none;
+    height: auto;
+   margin: 0;
+   padding: 0; /* Aligns drop-down box
+}
+*/
+.navbar {
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    position: absolute; /* Ensures that the menu doesn’t affect other elements */
+   /* border-right: 1px solid #54879d;*/
+}
+
+
+.navbar li 	{
+    height: auto;
+    width: 150px;  /* Each menu item is 150px wide */
+    float: left;  /* This lines up the menu items horizontally */
+    text-align: center;  /* All text is placed in the center of the box */
+    list-style: none;  /* Removes the default styling (bullets) for the list */
+    font: normal bold 12px/1.2em Arial, Verdana, Helvetica;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+.navbar a	{
+    padding: 18px 0;  /* Adds a padding on the top and bottom so the text appears centered vertically */
+     /* Creates a border in a slightly darker shade of blue than the background.  Combined with the left border, this creates a nice effect. */
+    text-decoration: none;  /* Removes the default hyperlink styling. */
+    color: white; /* Text color is white */
+    display: block;
+}
+
+.navbar li:hover, a:hover {background-color: white;}
+
+.navbar li ul 	{
+    display: none;  /* Hides the drop-down menu */
+    height: auto;
+    margin: 0; /* Aligns drop-down box underneath the menu item */
+    padding: 0; /* Aligns drop-down box underneath the menu item */
+}
+
+.navbar li:hover ul 	{
+    display: block; /* Displays the drop-down box when the menu item is hovered over */
+}
+
+#nav ul li:hover{
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#zoom{
+    transition: all .3s ease;
+}
+#zoom1{
+    transition: all .3s ease;
+}
+#zoom2{
+    transition: all .3s ease;
+}
+#zoom3{
+    transition: all .3s ease;
+}

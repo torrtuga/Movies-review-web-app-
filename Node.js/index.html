@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Getting Started</title>
+    <link href='css/titilium.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+
+
+  </head>
+
+  <body>
+  <div class="container">
+
+    <hr>
+
+    <!-- Footer -->
+    <header>
+      <div class="header1">
+        <img src="images/MovieBox1.png" WIDTH="250PX" height="80px" >
+      </div>
+      <!-- /.row -->
+    </header>
+
+  </div>
+
+  <div class="form">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a href="#login">Log In</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Sign Up for Free</h1>
+          
+          <form action=" http://127.0.0.1:8080/myaction" method="post">
+            
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text"name="user[fname]" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text" name="user[lname]" required autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"name="user[email]"required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password" name="user[pwd]" required autocomplete="off"/>
+          </div>
+          
+          <button type="submit" class="button button-block"/>Get Started</button>
+          
+          </form>
+
+        </div>
+        
+        <div id="login">   
+          <h1>Welcome Back!</h1>
+          
+          <form action="http://127.0.0.1:8080/signin" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email" name="user[email]" required autocomplete="off"/>
+              <script>
+              var x=document.getElementsByName('user[email]');
+              sessionStorage.setItem('name',x);
+              </script>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input type="password"name="user[pwd]"required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#" ><font color="white">Forgot Password?</font></a></p>
+          
+          <button class="button button-block"/>Log In</button>
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright &copy; MOvie Box Inc. 2016</p>
+        </div>
+      </div>
+      <!-- /.row -->
+    </footer>
+
+  </div>
+    <!-- /form -->
+    <script src='js/jquery.min.js'></script>
+    <script src="js/index.js"></script>
+
+
+    
+    
+    
+  </body>
+</html>
